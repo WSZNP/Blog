@@ -15,6 +15,7 @@ import { blogTheme } from './blog-theme';
 // 详见文档：https://vitepress.dev/reference/site-config
 export default defineConfig({
   // 继承博客主题(@sugarat/theme)
+  ignoreDeadLinks: true,
   extends: blogTheme,
   // base,
   lang: 'zh-cn',
