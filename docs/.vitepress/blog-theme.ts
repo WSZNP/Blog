@@ -1,5 +1,5 @@
 // 主题独有配置
-import { getThemeConfig } from '@sugarat/theme/node'
+import { getThemeConfig } from '@sugarat/theme/node';
 
 // 开启RSS支持（RSS配置）
 // import type { Theme } from '@sugarat/theme'
@@ -54,9 +54,18 @@ const blogTheme = getThemeConfig({
     mobileDisplay: true,
     models: [
       {
-        path: 'https://registry.npmmirror.com/oml2d-models/latest/files/models/Senko_Normals/senko.model3.json'
-      }
-    ]
+        name: 'senko',
+        path: 'https://registry.npmmirror.com/oml2d-models/latest/files/models/Senko_Normals/senko.model3.json',
+      },
+      {
+        name: 'shizuku',
+        path: 'https://registry.npmmirror.com/oml2d-models/latest/files/models/shizuku/shizuku.model.json',
+      },
+      {
+        name: 'pio',
+        path: 'https://registry.npmmirror.com/oml2d-models/latest/files/models/Pio/model.json',
+      },
+    ],
   },
 
   // 友链
@@ -64,8 +73,7 @@ const blogTheme = getThemeConfig({
     {
       nickname: 'Vitepress',
       des: 'Vite & Vue Powered Static Site Generator',
-      avatar:
-        'https://vitepress.dev/vitepress-logo-large.webp',
+      avatar: 'https://vitepress.dev/vitepress-logo-large.webp',
       url: 'https://vitepress.dev/zh/',
     },
   ],
@@ -105,6 +113,6 @@ const blogTheme = getThemeConfig({
   //   ],
   //   duration: 0
   // },
-})
+});
 
-export { blogTheme }
+export { blogTheme };
