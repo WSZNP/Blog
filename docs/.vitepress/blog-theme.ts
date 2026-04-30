@@ -24,8 +24,8 @@ const blogTheme = getThemeConfig({
   // 默认开启pagefind离线的全文搜索支持（如使用其它的可以设置为false）
   // search: false,
 
-  // 默认关闭 markdown 图表支持（开启会增加一定的构建耗时）
-  // mermaid: false
+  // 开启 markdown 图表支持
+  mermaid: true,
 
   // 页脚
   footer: {
@@ -77,6 +77,20 @@ const blogTheme = getThemeConfig({
       url: 'https://vitepress.dev/zh/',
     },
   ],
+
+  // 评论
+  comment: {
+    type: 'giscus',
+    options: {
+      repo: 'WSZNP/Blog',
+      repoId: 'R_kgDOSN1yjw',
+      category: 'Announcements',
+      categoryId: 'DIC_kwDOSN1yj84C8D84',
+      mapping: 'pathname',
+      inputPosition: 'bottom',
+      lang: 'zh-CN',
+    },
+  },
 
   // 公告
   // popover: {
