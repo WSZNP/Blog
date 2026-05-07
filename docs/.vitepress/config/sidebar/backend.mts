@@ -51,6 +51,8 @@ export const backendSidebar = {
     group('苍穹外卖', [
       java('基础搭建', '苍穹外卖/基础搭建'),
       java('Redis', '苍穹外卖/Redis'),
+      java('HttpClient', '苍穹外卖/HttpClient'),
+      java('SpringCache', '苍穹外卖/SpringCache'),
     ]),
   ],
   '/Note/Node/': [
