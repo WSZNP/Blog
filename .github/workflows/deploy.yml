@@ -32,7 +32,6 @@ concurrency:
 jobs:
   # 构建任务
   build:
-
     runs-on: ubuntu-latest
 
     # node v20 运行
@@ -48,6 +47,17 @@ jobs:
           # 保留 Git 信息
           fetch-depth: 0
 
+      # 先安装 PNPM
+      # 注意：如果 setup-node 使用 cache: pnpm，
+      # 那么 pnpm 需要先可用，否则会报找不到 pnpm
+      - uses: pnpm/action-setup@v4
+        name: Install pnpm
+        with:
+          # 固定 PNPM 版本，避免 latest 带来兼容性问题
+          version: 9.15.0
+          # version: 9
+          run_install: false
+
       # 设置使用 Node.js 版本
       - name: Use Node.js ${{ matrix.node-version }}
         uses: actions/setup-node@v4
@@ -55,40 +65,35 @@ jobs:
           node-version: ${{ matrix.node-version }}
           cache: pnpm
 
-      # 使用 最新的 PNPM
-      # 你也可以指定为具体的版本
-      - uses: pnpm/action-setup@v4
-        name: Install pnpm
-        with:
-          version: 9.15.0
-          # version: 9
-          run_install: false
-
-        # 安装依赖
+      # 安装依赖
       - name: Install dependencies
         run: pnpm install --no-frozen-lockfile
         # 锁定依赖版本
         # run: pnpm install --frozen-lockfile
 
-        # 构建项目
+      # 构建项目
       - name: Build blog project
         run: |
           echo ${{ github.workspace }}
           pnpm build
 
-        # 资源拷贝
+      # 资源拷贝
       - name: Build with Jekyll
         uses: actions/jekyll-build-pages@v1
         with:
           source: ./docs/.vitepress/dist
           destination: ./_site
 
-        # 上传 _site 的资源，用于后续部署
+      # 上传 _site 的资源，用于后续部署
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
+        with:
+          path: ./_site
 
   # 部署任务
   deploy:
+    # 仅在 push 时部署，pull request 只执行构建检查
+    if: github.event_name == 'push'
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
