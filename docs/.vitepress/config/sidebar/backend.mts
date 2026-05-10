@@ -53,6 +53,7 @@ export const backendSidebar = {
       java('Redis', '苍穹外卖/Redis'),
       java('HttpClient', '苍穹外卖/HttpClient'),
       java('SpringCache', '苍穹外卖/SpringCache'),
+      java('微信支付', '苍穹外卖/微信支付'),
     ]),
   ],
   '/Note/Node/': [
