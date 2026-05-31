@@ -55,6 +55,7 @@ export const backendSidebar = {
       java('SpringCache', '苍穹外卖/SpringCache'),
       java('微信支付', '苍穹外卖/微信支付'),
       java('定时任务', '苍穹外卖/定时任务'),
+      java('报表导出', '苍穹外卖/报表导出'),
     ]),
   ],
   '/Note/Node/': [
