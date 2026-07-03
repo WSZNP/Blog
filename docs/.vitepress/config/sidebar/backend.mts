@@ -57,7 +57,10 @@ export const backendSidebar = {
       java('定时任务', '苍穹外卖/定时任务'),
       java('报表导出', '苍穹外卖/报表导出'),
     ]),
-    group('微服务框架', [java('MybatisPlus', '微服务框架/MybatisPlus')]),
+    group('微服务框架', [
+      java('MybatisPlus', '微服务框架/MybatisPlus'),
+      java('docker', '微服务框架/docker'),
+    ]),
   ],
   '/Note/Node/': [
     group('Node基础', [
