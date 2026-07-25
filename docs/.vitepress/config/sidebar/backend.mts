@@ -61,6 +61,7 @@ export const backendSidebar = {
       java('MybatisPlus', '微服务框架/MybatisPlus'),
       java('docker', '微服务框架/docker'),
       java('SpringCloud基础', '微服务框架/SpringCloud基础'),
+      java('SpringCloud-网关与配置', '微服务框架/SpringCloud-网关与配置'),
     ]),
   ],
   '/Note/Node/': [
