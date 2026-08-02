@@ -62,6 +62,7 @@ export const backendSidebar = {
       java('docker', '微服务框架/docker'),
       java('SpringCloud基础', '微服务框架/SpringCloud基础'),
       java('SpringCloud-网关与配置', '微服务框架/SpringCloud-网关与配置'),
+      java('SpringCloud-限流与分布式事务', '微服务框架/SpringCloud-限流与分布式事务'),
     ]),
   ],
   '/Note/Node/': [
