@@ -64,6 +64,7 @@ export const backendSidebar = {
       java('SpringCloud-网关与配置', '微服务框架/SpringCloud-网关与配置'),
       java('SpringCloud-限流与分布式事务', '微服务框架/SpringCloud-限流与分布式事务'),
       java('RabbitMQ-基础', '微服务框架/RabbitMQ-基础'),
+      java('RabbitMQ-高级', '微服务框架/RabbitMQ-高级'),
     ]),
   ],
   '/Note/Node/': [
