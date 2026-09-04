@@ -67,6 +67,7 @@ export const backendSidebar = {
       java('RabbitMQ-高级', '微服务框架/RabbitMQ-高级'),
       java('ElasticSearch-基础', '微服务框架/ElasticSearch-基础'),
       java('ElasticSearch-复合查询', '微服务框架/ElasticSearch-复合查询'),
+      java('Redis集群', '微服务框架/Redis集群'),
     ]),
   ],
   '/Note/Node/': [
